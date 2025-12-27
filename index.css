@@ -1,0 +1,288 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--peach);
+  padding: 40px;
+  gap: 20px;
+}
+
+.banner .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.banner .left h2 {
+  font-size: 50px;
+  color: var(--brown);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.banner .left p {
+  font-size: 20px;
+  color: var(--brown);
+}
+
+.banner .right {
+  background: url(../Assets/Banner-Right.jpg);
+  height: 400px;
+  width: 850px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.banner .left .btns {
+  display: flex;
+  gap: 20px;
+}
+
+.banner .left .btns button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: 1px solid var(--brown);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+.banner .left .btns button a {
+  text-decoration: none;
+}
+
+.banner .left .btns .shop-now {
+  background-color: var(--brown);
+  color: var(--peach);
+  border: 2px solid var(--brown);
+}
+
+.banner .left .btns .shop-now:hover {
+  color: var(--brown);
+  background-color: var(--peach);
+  transform: translateY(-6px);
+  box-shadow: 0px 5px 10px var(--brown);
+}
+
+.banner .left .btns .find-stylists {
+  background-color: var(--peach);
+  color: var(--brown);
+}
+
+.banner .left .btns .find-stylists:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 5px 10px var(--brown);
+  border: 2px solid var(--brown);
+}
+
+.stylists-section {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 40px;
+}
+
+.stylists-section .upper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.stylists-section h3 {
+  font-size: 36px;
+  color: var(--brown);
+}
+
+.stylists-section p {
+  color: gray;
+}
+
+.stylists-section .lower {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.stylists-section .lower a{
+  text-decoration: none;
+}
+
+.stylists-section .lower .image-alexandra {
+  height: 302px;
+  width: 302px;
+  background: url(../Assets/alexanra.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stylists-section .lower .image-marcus {
+  height: 302px;
+  width: 302px;
+  background: url(../Assets/Marcus.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stylists-section .lower .image-james {
+  height: 302px;
+  width: 302px;
+  background: url(../Assets/james.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stylists-section .lower h3 {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.stylists-section .lower p {
+  font-size: 15px;
+  color: #ff803c;
+  padding-left: 10px;
+}
+
+.stylists-section .lower .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgb(255, 249, 243);
+  padding-bottom: 15px;
+  transition: all 200ms linear;
+}
+.stylists-section .lower .container:hover{
+  box-shadow: 0px 6px 10px 0px rgb(229, 229, 229);
+  transform: translateY(-6px);
+}
+
+
+.stylists-section .lower .rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 10px;
+}
+
+
+.collection-section {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 40px;
+  background-color: var(--peach);
+}
+
+.collection-section .upper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-section h3 {
+  font-size: 36px;
+  color: var(--brown);
+}
+
+.collection-section p {
+  color: gray;
+}
+
+.collection-section .lower {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.collection-section .lower .image-summer {
+  height: 302px;
+  width: 100%;
+  background: url(../Assets/Summer.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.collection-section .lower .image-winter {
+  height: 302px;
+  width: 100%;
+  background: url(../Assets/winter.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.collection-section .lower .image-wedding {
+  height: 302px;
+  width: 100%;
+  background: url(../Assets/wedding.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.collection-section .lower h4{
+  padding-left: 10px;
+  font-weight: 400;
+  color: #ff803c;
+}
+
+.collection-section .lower h3 {
+  font-size: 26px;
+  padding-left: 10px;
+}
+
+.collection-section .lower p {
+  font-size: 15px;
+  color: gray;
+  padding-left: 10px;
+}
+.collection-section .lower .container a{
+  background-color: var(--brown);
+  color: white;
+  align-self: flex-start;
+  margin: 10px;
+  margin-top: 15px;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 200ms linear;
+  border: 2px solid var(--brown);
+}
+
+.collection-section .lower .container a:hover{
+  transform: translateY(-4px);
+  box-shadow: 0px 0px 10px 0px black;
+  background-color: white;
+  color: var(--brown);
+}
+
+.collection-section .lower .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgb(255, 249, 243);
+  padding-bottom: 15px;
+  transition: all 200ms linear;
+  width: 46%;
+}
+.collection-section .lower .container:hover{
+  box-shadow: 0px 1px 10px 0px rgb(156, 156, 156);
+}
+
