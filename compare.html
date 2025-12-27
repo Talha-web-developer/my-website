@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="Assets/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/colors.css" />
+  <link rel="stylesheet" href="CSS/Custom.css" />
+  <link rel="stylesheet" href="CSS/fonts.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/compare.css" />
+  <link rel="stylesheet" href="CSS/compare-responsive.css" />
+
+  <title>Compare</title>
+</head>
+
+<body>
+  <!-- header below -->
+  <header>
+    <div class="logo">
+      <p class="E">E</p>
+      <h2>Elegance Studio</h2>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle navigation menu">
+      &#9776;
+    </button>
+    <nav class="nav-menu">
+      <ul class="nav-ul">
+        <a href="index.html">
+          <li>Home</li>
+        </a>
+        <a href="shop.html">
+          <li>Shop</li>
+        </a>
+        <a href="compare.html">
+          <li>Compare</li>
+        </a>
+        <a href="contact.html">
+          <li>Contact</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <!-- header above -->
+
+
+
+  <div class="banner">
+    <h2>Compare</h2>
+  </div>
+
+  <!-- banner section above-->
+
+
+  <main class="compare-container">
+    <div class="compare-selectors">
+      <div class="selector">
+        <label for="product1">Select First Product:</label>
+        <select id="product1" onchange="updateComparison()">
+          <option value="">-- Select a product --</option>
+        </select>
+      </div>
+
+      <div class="selector">
+        <label for="product2">Select Second Product:</label>
+        <select id="product2" onchange="updateComparison()">
+          <option value="">-- Select a product --</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="comparison-results">
+      <div class="product-display">
+        <h3 id="product1-name">-</h3>
+        <p id="product1-price">-</p>
+        <p id="product1-fabric">-</p>
+      </div>
+      <div class="product-display">
+        <h3 id="product2-name">-</h3>
+        <p id="product2-price">-</p>
+        <p id="product2-fabric">-</p>
+      </div>
+    </div>
+  </main>
+
+
+  <script>
+    const products = [
+      {
+        "id": 101,
+        "name": "Tropical Palm Maxi Dress",
+        "category": "Summer Breeze",
+        "image_url": "Assets/tropical_palm_dress.jpg",
+        "price": 4999.00,
+        "fabric_type": "Rayon",
+        "sizes_available": ["S", "M", "L"],
+        "brief_summary": "A flowy maxi dress in vibrant green palm print."
+      },
+      {
+        "id": 102,
+        "name": "Pastel Sunset Mini Dress",
+        "category": "Summer Breeze",
+        "image_url": "Assets/pastel_sunset_dress.jpg",
+        "price": 4299.00,
+        "fabric_type": "Cotton Blend",
+        "sizes_available": ["XS", "S", "M", "L"],
+        "brief_summary": "A cute mini dress with pastel sunset colors."
+      },
+      {
+        "id": 103,
+        "name": "Floral Wrap Dress",
+        "category": "Summer Breeze",
+        "image_url": "Assets/floral_wrap_dress.jpg",
+        "price": 4599.00,
+        "fabric_type": "Viscose",
+        "sizes_available": ["S", "M", "L", "XL"],
+        "brief_summary": "Elegant wrap dress with floral pattern."
+      },
+      {
+        "id": 104,
+        "name": "Striped Midi Dress",
+        "category": "Summer Breeze",
+        "image_url": "Assets/striped_midi_dress.jpg",
+        "price": 4799.00,
+        "fabric_type": "Cotton",
+        "sizes_available": ["XS", "S", "M"],
+        "brief_summary": "Classic navy and white striped midi dress."
+      },
+      {
+        "id": 105,
+        "name": "Off-Shoulder Maxi",
+        "category": "Summer Breeze",
+        "image_url": "Assets/off_shoulder_maxi.jpg",
+        "price": 5499.00,
+        "fabric_type": "Chiffon",
+        "sizes_available": ["S", "M", "L", "XL"],
+        "brief_summary": "Elegant off-shoulder maxi dress for summer evenings."
+      },
+      {
+        "id": 106,
+        "name": "Denim Pinafore Dress",
+        "category": "Summer Breeze",
+        "image_url": "Assets/denim_pinafore.jpg",
+        "price": 3999.00,
+        "fabric_type": "Denim",
+        "sizes_available": ["XS", "S", "M", "L"],
+        "brief_summary": "Casual denim pinafore dress for everyday wear."
+      }
+    ];
+
+    function populateDropdowns() {
+      const product1Select = document.getElementById('product1');
+      const product2Select = document.getElementById('product2');
+
+      while (product1Select.options.length > 1) product1Select.remove(1);
+      while (product2Select.options.length > 1) product2Select.remove(1);
+
+      for (let i = 0; i < products.length; i++) {
+        const product = products[i];
+
+        // For first dropdown
+        const option1 = document.createElement('option');
+        option1.value = product.id;
+        option1.textContent = product.name;
+        product1Select.appendChild(option1);
+
+        // For second dropdown
+        const option2 = document.createElement('option');
+        option2.value = product.id;
+        option2.textContent = product.name;
+        product2Select.appendChild(option2);
+      }
+    }
+
+
+    // Function to update product display
+    function updateComparison() {
+      const product1Id = document.getElementById('product1').value;
+      const product2Id = document.getElementById('product2').value;
+
+      // Update first product display
+      function findProductById(productId) {
+        for (let i = 0; i < products.length; i++) {
+          if (products[i].id == productId) {
+            return products[i];
+          }
+        }
+      }
+      const product = findProductById(product1Id);
+      if (product) {
+        document.getElementById('product1-name').textContent = product.name;
+        document.getElementById('product1-price').textContent = '₹' + product.price.toFixed(2);
+        document.getElementById('product1-fabric').textContent = 'Fabric: ' + product.fabric_type;
+      }
+      else {
+        document.getElementById('product1-name').textContent = '-';
+        document.getElementById('product1-price').textContent = '-';
+        document.getElementById('product1-fabric').textContent = '-';
+      }
+
+      // Update second product display
+      const product2 = findProductById(product2Id);
+      if (product2) {
+        document.getElementById('product2-name').textContent = product2.name;
+        document.getElementById('product2-price').textContent = '₹' + product2.price.toFixed(2);
+        document.getElementById('product2-fabric').textContent = 'Fabric: ' + product2.fabric_type;
+      }
+      else {
+        document.getElementById('product2-name').textContent = '-';
+        document.getElementById('product2-price').textContent = '-';
+        document.getElementById('product2-fabric').textContent = '-';
+      }
+    }
+
+    populateDropdowns();
+
+    // //  Initialize the page
+    // document.addEventListener('DOMContentLoaded', populateDropdowns);
+  </script>
+
+
+
+  <!-- footer below -->
+
+  <div class="footer">
+    <div class="upper">
+      <div class="footer-1">
+        <h2>Elegance Studio</h2>
+        <p><i>Premium fashion styling services for the discerning.</i></p>
+      </div>
+      <div class="footer-2">
+        <h2>Navigation</h2>
+        <ul>
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="shop.html">
+            <li>Shop</li>
+          </a>
+          <a href="compare.html">
+            <li>Compare</li>
+          </a>
+          <a href="contact.html">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </div>
+      <div class="footer-3">
+        <h2>Connect</h2>
+        <ul>
+          <a href="http://instagram.com/">
+            <li>Instagram</li>
+          </a>
+          <a href="http://youtube.com/">
+            <li>Youtube</li>
+          </a>
+          <a href="http://tiktok.com/">
+            <li>Tiktok</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+    <div class="lower">
+      <p> 2025 Elegance Studio. All rights reserved.</p>
+    </div>
+  </div>
+
+
+  <!-- footer above -->
+
+  <!-- jquery below -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".menu-toggle").click(function () {
+        $(".nav-menu").toggleClass("open");
+      });
+    });
+  </script>
+
+
+
+</body>
+
+</html>

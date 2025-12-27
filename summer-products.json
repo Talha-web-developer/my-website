@@ -1,0 +1,84 @@
+[
+  {
+    "id": 101,
+    "name": "Tropical Palm Maxi Dress",
+    "category": "Summer Breeze",
+    "image_url": "Assets/tropical_palm_dress.jpg",
+    "price": 4999.00,
+    "fabric_type": "Rayon",
+    "sizes_available": [
+      "S",
+      "M",
+      "L"
+    ],
+    "brief_summary": "A flowy maxi dress in vibrant green palm print. Perfect for a beach day or a casual brunch."
+  },
+  {
+    "id": 102,
+    "name": "Pastel Sunset Mini Dress",
+    "category": "Summer Breeze",
+    "image_url": "Assets/luxury-linen-trousers.jpg",
+    "price": 3550.00,
+    "fabric_type": "Cotton Blend",
+    "sizes_available": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "brief_summary": "Light and airy mini dress with a soft pastel watercolor print. Elegant summer wear."
+  },
+  {
+    "id": 103,
+    "name": "Bohemian Tie-Dye Frock",
+    "category": "Summer Breeze",
+    "image_url": "Assets/luxury-silk-midi-skirt.jpg",
+    "price": 4200.00,
+    "fabric_type": "Viscose",
+    "sizes_available": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "brief_summary": "A stylish V-neck tie-dye dress with a flattering silhouette, perfect for a relaxed look."
+  },
+  {
+    "id": 104,
+    "name": "Citrus Burst Short Suit",
+    "category": "Summer Breeze",
+    "image_url": "Assets/Milada.jpg",
+    "price": 5899.00,
+    "fabric_type": "Linen",
+    "sizes_available": [
+      "S",
+      "M"
+    ],
+    "brief_summary": "Chic linen short set in a bright yellow print. Great for elevated casual outings."
+  },
+  {
+    "id": 105,
+    "name": "Coral Hues Kaftan",
+    "category": "Summer Breeze",
+    "image_url": "Assets/engin.jpg",
+    "price": 3900.00,
+    "fabric_type": "Georgette",
+    "sizes_available": [
+      "Free Size"
+    ],
+    "brief_summary": "An easy-to-wear kaftan in warm coral and orange tones. The ultimate comfortable resort wear."
+  },
+  {
+    "id": 106,
+    "name": "Green Meadow Wrap Dress",
+    "category": "Summer Breeze",
+    "image_url": "Assets/Ali-ahmad.jpg",
+    "price": 4650.00,
+    "fabric_type": "Chiffon",
+    "sizes_available": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "brief_summary": "A light green floral wrap dress. Versatile and feminine for day or evening."
+  }
+]

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="Assets/favicon.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/colors.css" />
+    <link rel="stylesheet" href="CSS/Custom.css" />
+    <link rel="stylesheet" href="CSS/fonts.css" />
+    <link rel="stylesheet" href="CSS/header.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
+    <link rel="stylesheet" href="CSS/stylist.css" />
+
+    <title>Alexandra</title>
+  </head>
+
+  <body>
+    <!-- header below -->
+    <header>
+      <div class="logo">
+        <p class="E">E</p>
+        <h2>Elegance Studio</h2>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
+      <nav class="nav-menu">
+        <ul class="nav-ul">
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="shop.html">
+            <li>Shop</li>
+          </a>
+          <a href="compare.html">
+            <li>Compare</li>
+          </a>
+          <a href="contact.html">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <!-- header above -->
+
+    <!-- banner section below -->
+
+    <div class="banner">
+      <div class="left">
+        <img src="Assets/alexanra.jpg" />
+      </div>
+      <div class="right">
+        <h2>Alexandra Chen</h2>
+        <p>
+          Expert in Airy Fabrics, Destination Chic, and Bespoke Summer Styling.
+        </p>
+         <a href="contact.html"><button class="contact-stylist">Contact Alexandra</button></a>
+      </div>
+    </div>
+
+    <!-- banner section above-->
+
+    <!-- products below -->
+
+    <section class="product-listing-section">
+      <div class="product-list summer-product-list"></div>
+    </section>
+
+    <script>
+      function renderSummerCollection() {
+        const productListContainer = document.querySelector(
+          ".summer-product-list"
+        );
+
+        fetch("summer-products.json")
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (products) {
+            for (let i = 0; i < products.length; i++) {
+              const product = products[i];
+
+              const productCard = document.createElement("div");
+              productCard.classList.add("product-card");
+
+              productCard.innerHTML = `
+                        <img src="${product.image_url}" alt="${
+                product.name
+              }" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">${product.name}</h3>
+                            <p class="product-price"> ${product.price.toFixed(
+                              2
+                            )}</p>
+                            <p class="product-summary">${
+                              product.brief_summary
+                            }</p>
+                            <div class="product-meta">
+                                <span class="fabric">Fabric: ${
+                                  product.fabric_type
+                                }</span>
+                            </div>
+                            <button class="add-to-cart-btn"> <a href="product_details.docx" download class="details-link">Download Details</a></button>
+                        </div>
+                    `;
+              productListContainer.appendChild(productCard);
+            }
+          })
+          .catch(function (error) {
+            console.error("Summer Products Error:", error);
+            if (productListContainer)
+              productListContainer.innerHTML =
+                "<p>Could not load Summer Collection at this moment.</p>";
+          });
+      }
+
+      renderSummerCollection();
+    </script>
+
+    <!-- products above -->
+
+    <!-- footer below -->
+
+    <div class="footer">
+      <div class="upper">
+        <div class="footer-1">
+          <h2>Elegance Studio</h2>
+          <p><i>Premium fashion styling services for the discerning.</i></p>
+        </div>
+        <div class="footer-2">
+          <h2>Navigation</h2>
+          <ul>
+            <a href="index.html">
+              <li>Home</li>
+            </a>
+            <a href="shop.html">
+              <li>Shop</li>
+            </a>
+            <a href="compare.html">
+              <li>Compare</li>
+            </a>
+            <a href="contact.html">
+              <li>Contact</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer-3">
+          <h2>Connect</h2>
+          <ul>
+            <a href="http://instagram.com/">
+              <li>Instagram</li>
+            </a>
+            <a href="http://youtube.com/">
+              <li>Youtube</li>
+            </a>
+            <a href="http://tiktok.com/">
+              <li>Tiktok</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="lower">
+        <p>© 2025 Elegance Studio. All rights reserved.</p>
+      </div>
+    </div>
+
+    <!-- footer above -->
+
+    <!-- jquery below -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu-toggle").click(function () {
+          $(".nav-menu").toggleClass("open");
+        });
+      });
+    </script>
+    <!-- jquery above-->
+  </body>
+</html>

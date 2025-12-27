@@ -1,0 +1,62 @@
+[
+  {
+    "id": 301,
+    "name": "The Classic Lace Bridal Gown",
+    "category": "Wedding Dreams",
+    "image_url": "Assets/wedding1.jpg",
+    "price": 45000.00,
+    "fabric_type": "French Lace & Silk Organza",
+    "sizes_available": ["0", "2", "4", "6", "8"],
+    "brief_summary": "Timeless A-line gown with intricate French lace detailing and long sleeves."
+  },
+  {
+    "id": 302,
+    "name": "Modern Minimalist Sheath Dress",
+    "category": "Wedding Dreams",
+    "image_url": "Assets/wedding2.jpg",
+    "price": 32000.00,
+    "fabric_type": "Crepe",
+    "sizes_available": ["0", "2", "4"],
+    "brief_summary": "Sleek and contemporary sheath dress with a clean neckline and no embellishments."
+  },
+  {
+    "id": 303,
+    "name": "Crystal Embellished Veil",
+    "category": "Wedding Dreams",
+    "image_url": "Assets/wedding3.jpg",
+    "price": 8500.00,
+    "fabric_type": "Tulle with Swarovski Crystals",
+    "sizes_available": ["Cathedral Length"],
+    "brief_summary": "A magnificent cathedral length veil adorned with sparkling crystals along the edge."
+  },
+  {
+    "id": 304,
+    "name": "Groom's Midnight Tuxedo",
+    "category": "Wedding Dreams",
+    "image_url": "Assets/sarah.jpg",
+    "price": 28999.00,
+    "fabric_type": "Wool Blend",
+    "sizes_available": ["38R", "40R", "42L"],
+    "brief_summary": "Sharp midnight blue tuxedo with black satin lapels, perfect for the reception."
+  },
+  {
+    "id": 305,
+    "name": "Floral Embroidered Lehenga",
+    "category": "Wedding Dreams",
+    "image_url": "Assets/wedding5.jpg",
+    "price": 55000.00,
+    "fabric_type": "Raw Silk & Net",
+    "sizes_available": ["Custom Fit"],
+    "brief_summary": "Vibrant lehenga set featuring intricate floral thread work and a heavy border."
+  },
+  {
+    "id": 306,
+    "name": "Pearl Drop Earrings Set",
+    "category": "Wedding Dreams",
+    "image_url": "Assets/wedding6.jpg",
+    "price": 4150.00,
+    "fabric_type": "Cultured Pearls & Sterling Silver",
+    "sizes_available": ["N/A"],
+    "brief_summary": "Delicate pearl drop earrings, ideal accessory for the bridal party or bride herself."
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "id": 201,
+    "name": "Cashmere Oversized Turtleneck",
+    "category": "Winter Elegance",
+    "image_url": "Assets/Naseebo.jpg",
+    "price": 9500.00,
+    "fabric_type": "100% Cashmere",
+    "sizes_available": [
+      "S",
+      "M",
+      "L"
+    ],
+    "brief_summary": "Luxuriously soft and warm turtleneck for ultimate cold-weather comfort."
+  },
+  {
+    "id": 202,
+    "name": "Velvet Embroidered Blazer",
+    "category": "Winter Elegance",
+    "image_url": "Assets/Maxi.jpg",
+    "price": 12499.00,
+    "fabric_type": "Silk-Velvet Blend",
+    "sizes_available": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "brief_summary": "Richly embroidered velvet blazer, perfect for evening wear and formal events."
+  },
+  {
+    "id": 203,
+    "name": "Merino Wool Trench Coat",
+    "category": "Winter Elegance",
+    "image_url": "Assets/mahdi.jpg",
+    "price": 18999.00,
+    "fabric_type": "Pure Merino Wool",
+    "sizes_available": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "brief_summary": "A sophisticated, long trench coat providing exceptional warmth and structure."
+  },
+  {
+    "id": 204,
+    "name": "Faux Fur Trimmed Shawl",
+    "category": "Winter Elegance",
+    "image_url": "Assets/metal.jpg",
+    "price": 7250.00,
+    "fabric_type": "Acrylic/Faux Fur",
+    "sizes_available": [
+      "One Size"
+    ],
+    "brief_summary": "Elegant and plush shawl with delicate faux fur trim for added luxury."
+  },
+  {
+    "id": 205,
+    "name": "Houndstooth Midi Skirt",
+    "category": "Winter Elegance",
+    "image_url": "Assets/sarah.jpg",
+    "price": 5100.00,
+    "fabric_type": "Thick Tweed/Wool Blend",
+    "sizes_available": [
+      "S",
+      "M"
+    ],
+    "brief_summary": "Classic houndstooth pattern in a structured midi skirt, great for office wear."
+  },
+  {
+    "id": 206,
+    "name": "Leather Trousers (Lined)",
+    "category": "Winter Elegance",
+    "image_url": "Assets/Naseebo.jpg",
+    "price": 14500.00,
+    "fabric_type": "Genuine Leather (Fleece Lined)",
+    "sizes_available": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "brief_summary": "Warm, lined leather trousers offering a sleek, contemporary winter look."
+  }
+]
